@@ -1,7 +1,7 @@
 # Mac-Salad
 A utilities module for eurorack
 
-**First off, some labeling conventions…**
+## First off, some labeling conventions
 
 Inputs have a white line and are grouped to the left. If there is a
 signal normalized to the input, it is listed next to the jack with a dotted
@@ -13,14 +13,14 @@ Seven jacks have a little flower growing on them. The six inputs with
 the flower, in addition to their regular function, form a mixer routed
 to the output jack with a flower, “Da Kine” (more on this later).
 
-** Now the controls…
+## Now the controls…
 
 There is a big knob and an input jack labeled “Scoop”. The signal at the
 jack (bipolar signals are fine) is summed with the knob’s offset (+/-5V).
 The result (I’ll just call it Scoop from here on out) is used internally
 in several locations, either as a normalled connection or a control signal.
 
-** Next is the panner/fader.
+## Next is the panner/fader.
 
 This section has four inputs: right, left, fade, and offset. Right and left
 are normalled to +5V and -5V respectively. Fade is normalled to
@@ -57,7 +57,7 @@ don’t, they usually do it in a musically interesting way.
 
 There are a bunch of trimmers to help match all the VCA levels.
 
-** Next section: analog logic!
+## Next section: analog logic!
 
 We have an OR circuit and an AND circuit, both w/ two inputs, one output.
 
@@ -76,7 +76,7 @@ inputs are normalled to Scoop. With a signal going into OR(1), OR out will
 always show any part of the signal above Scoop, and AND out will show
 whatever portion of the signal falls below Scoop.
 
-** Rectify
+## Rectify
 
 Rectify is a simple one. One input, one output. It’s a full wave rectifier!
 
@@ -87,7 +87,7 @@ Something fun: if you put in a saw wave, you get a glitchy triangle wave
 out. If you put in a triangle wave, you get another triangle wave at
 double the frequency out.
 
-** Follow
+## Follow
 
 Follow is an envelope follower based on the one in the ARP2600. It has no
 input of its own—it takes its input from the Rectify input jack.
@@ -100,7 +100,7 @@ little envelope at the Follow jack, which could open a filter. Or you
 could invert the output and send it to a VCA and you have a basic
 sidechain compressor effect!
 
-** Puka
+## Puka
 
 Puka is a weird one. It’s a sort-of wavefolder…
 
@@ -113,8 +113,8 @@ send a sweep from -5V to +5V, the output starts at 0V, will climb to
 +5V until the input hits 0V…at which point the output swings
 instantaneously from +5 to -5V, then climbs again till 0V.
 
-** Then we have Holoholo...
-...(which means “wander aimlessly”).
+## Then we have Holoholo...
+### ...(which means “wander aimlessly”).
 
 This is the most idiosyncratic circuit in the module—I’m not aware
 of any other eurorack module besides Cold Mac that includes anything
@@ -153,7 +153,7 @@ the point will move in that direction. If you let the joystick
 snap back to center (0V), the point will stop where it is. Neat! Analog
 video games on your modular synth!
 
-** Da Kine
+## Da Kine
 
 Ok so I mentioned the jacks with the little flowers before—the Da Kine
 circuit—now a little more detail.
@@ -166,7 +166,7 @@ unity mixer, and then finally sent to a VCA. Scoop controls the VCA.
 Simple, and gives you a handy way to use inputs that would otherwise be
 left unused in a patch!
 
-** And finally, Mauna
+## And finally, Mauna
 
 As I worked up the schematic, I ended up with an extra VCA. Very simple,
 one in, one out, controlled by Scoop.
@@ -178,7 +178,7 @@ come up with any specific applications beyond “hey, free VCA.”
 That said, Right is itself normaled to +5V, the effect of which is that a
 bipolar signal going into Scoop and out Mauna will be scaled to fit between 0-5V
 
-** And that’s it!
+## And that’s it!
 
 There are a lot of interesting ways to use this module. Some are more
 apparent than others. 
@@ -193,3 +193,5 @@ Or you can use it like six or seven totally separate utility modules!
 Combine multiples for wildly complex patching.
 
 Fun stuff :) I’m excited. 😁
+
+cc-by-na-sa
