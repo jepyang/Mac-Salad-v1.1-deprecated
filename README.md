@@ -1,7 +1,7 @@
 # Mac-Salad
 A utilities module for eurorack
 
-** First off, some labeling conventions…
+**First off, some labeling conventions…**
 
 Inputs have a white line and are grouped to the left. If there is a
 signal normalized to the input, it is listed next to the jack with a dotted
