@@ -114,7 +114,7 @@ send a sweep from -5V to +5V, the output starts at 0V, will climb to
 instantaneously from +5 to -5V, then climbs again till 0V.
 
 ## Then we have Holoholo...
-### ...(which means “wander aimlessly”).
+**...(which means “wander aimlessly”).**
 
 This is the most idiosyncratic circuit in the module—I’m not aware
 of any other eurorack module besides Cold Mac that includes anything
