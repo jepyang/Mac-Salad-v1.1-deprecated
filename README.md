@@ -1,3 +1,7 @@
+(please note, this version of mac salad is officially deprecated. no additional
+updates will ever be made, no additional documents will ever be posted. this
+material is posted here purely for reference.)
+
 # Mac-Salad
 A utilities module for eurorack
 
@@ -194,4 +198,7 @@ Combine multiples for wildly complex patching.
 
 Fun stuff :) I’m excited. 😁
 
-cc-by-na-sa
+cc-by-nc-sa
+no part of this project may be used, for training or otherwise, in conjunction with
+AI algorithms or any machine-learning without the express permission of the author
+absolutely, strictly, 100% non-commercial
