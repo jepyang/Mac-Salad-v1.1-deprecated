@@ -1,0 +1,47 @@
+BUILD GUIDE FOR
+MAC SALAD v1.1
+
+
+BOM
+1 Alfa AS3360 SOIC (dual vca IC)
+4 single vactrols
+5 100k multi-turn trimmers
+2 100k 1/4 through-hole resistors
+2 10uF through-hole electrolytic caps
+1 10-pin eurorack power header
+1 through-hole LED
+1 10k alpha-style pot (RV1)
+1 100k alpha-style pot (RV3)
+22 thonkiconn jacks
+1 big knob (33mm diameter recommended)
+1 small knob (1900h clone or similar recommended)
+
+BUILD NOTES
+- The AS3360 is U16 (bottom left corner). The pin 1 marking can be difficult to identify: the beveled edge of the chip indicates pin 1 and should go to the left (all ICs have pin one in the upper left)
+- choose vactrols with an off resistance >5Mohm, higher resistance is better. Quicker vactrols are probably better for the most "vca-like" response but ultimately its personal preference. if you want to DIY the vactrols, I used GL5549 LDRs and plain-jane (not ultra-bright if you can help it) LEDs.
+- lone LED can be anything, doesnt seem to really make a difference. flat-top will be easier to align but I thought regular 3mm round LEDs looked better, it doesnt matter.
+- for all LEDs (including the ones inside the vactrols) the short (negative) leg goes in the hole with the square pad
+- the two through-hole resistors set the final gain on the vactrol section. 100k should be fine but if you find you can't get enough gain out of the cross-fader, try adjusting the value of these resistors.
+- use the panel to help align all the jacks and pots, you dont want to be resoldering 20+ jacks if you get them on crooked the first time
+- don't forget the lone LED! it goes on the front of the PCB (jacks and pots side) and it's worth carefully aligning it straight b/c it will shine through the front panel. fun!
+
+POST-BUILD NOTES
+- there are 5 trimmers
+- four of the trimmers adjust the overall gain of the vactrol VCAs that make up the fade circuit. each is placed next to the vactrol it adjusts.
+- the other trimmer (RV2) adds offset to the control signal
+
+CALIBRATION
+- first off, i'll just say: don't worry too much about getting the calibration perfect, these are vactrol VCAs, they are inherently not "precision" circuits. the goal here is just to get everything into a useful range and feeling basically right, not to fine-tune everything down to the millivolt.
+- start with the fade attenuator pot turned completely anti-clockwise (0%) and nothing plugged into any inputs
+- adjust RV2 until the output at the right and left output jacks match fairly close. should both be close to 0V, they might be above or below. this will probably start out way out of whack and require quite a few turns. (this is not the best-designed part of the circuit, it works fine but i probably should have just left it out entirely, if you like it will probably work fine to skip the trimmer here and just bridge the bottom two pads with a resistor leg)
+- next turn the fade attenuator pot completely clockwise (100%)
+- now you're going to set the max gain for each of the four VCAs. i forget which trimmer you adjust in each position, but basically you check Left out with Scoop at both minimum and maximum, and then check Right out with Scoop at minimum and maximum. at each of these four positions, figure out which trimmer adjusts the voltage you're seeing. the wrong trimmer might wobble the output verrrrry slightly, but the correct trimmer will have an immediate and obvious effect on the output. once you know which trimmer to check, adjust it till the output is either + or -5V (it should be obvious which direction to go, shouldnt be off by more than a volt or two)
+so basically
+--Fade attenuator at max (fully clockwise)
+--check voltage at Left out with Scoop at minimum (fully anti-clockwise), find trimmer, adjust output to -5V
+--still checking voltage at Left, crank Scoop to max (fully clockwise), find trimmer, adjust output to +5V
+--switch to checking voltage at Right output, with Scoop and Fade attenuator still fully-clockwise, find trimmer, adjust output to -5V
+-- still checking voltage at Right, turn Scoop to min (fully anti-clockwise), find trimmer, adjust output to +5V
+* technically you might want to check the voltage at the test pads labeled +5V and -5V, and adjust the trimmers to match these voltages, but they shouldnt be more than a couple hundred millivolts from their nominal value anyway. just depends if you want as close to 5V at the outputs with nothing patched to Right/Left (handy as a consistent +/-5V source for patches), or if you want as close to unity gain at the output when something *is* patched into Right/Left. Or I guess you can add or subtract gain according to your own sick little desires, you do you, im not a cop. but remember: not precision VCAs, don't overthink it, this module is heavily vibes-based.
+
+that's pretty much it I think, feel free to email me at jepyang@jepyang.com or find me on the EMS discord if you have any questions.
