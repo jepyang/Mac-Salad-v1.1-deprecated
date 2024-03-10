@@ -198,7 +198,11 @@ Combine multiples for wildly complex patching.
 
 Fun stuff :) I’m excited. 😁
 
+
+
 cc-by-nc-sa
+
 no part of this project may be used, for training or otherwise, in conjunction with
 AI algorithms or any machine-learning without the express permission of the author
+
 absolutely, strictly, 100% non-commercial
